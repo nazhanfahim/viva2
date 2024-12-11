@@ -35,7 +35,7 @@ public class Viva2q2 {
                 double base=kb.nextDouble();
                 System.out.print("Enter the height of the triangle: ");
                 double height=kb.nextDouble();
-                System.out.printf("The area of the triangle is:"+"%.2f",calculateTriangleArea(base, height));
+                System.out.printf("The area of the triangle is: "+"%.2f",calculateTriangleArea(base, height));
                 break;
             }
             default:{
