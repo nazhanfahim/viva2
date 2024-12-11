@@ -18,15 +18,11 @@ public class Viva2q4 {
        
         for(int i=0;i<size;i++){
             System.out.print("Enter ISBN 10 number: ");
-            WOW[i]=kb.next();
-            
+            WOW[i]=kb.next();  
        }
         validateISBNList(WOW);
-        
     }
-    
-    
-    
+
     public static int isValidISBN(int num, int lastdigit){
         int check=0;
         int position = 9;
@@ -43,8 +39,6 @@ public class Viva2q4 {
         else{
             return 0;
         }
-        
-        
     }
     
     public static void validateISBNList(String[] num){
@@ -65,7 +59,6 @@ public class Viva2q4 {
                 hold+=a*Math.pow(10,count);
                 if(count>0)
                     count--;
-                
             }
             
             if (checking=='X'){ //assigns number 10 to the last digit
@@ -74,7 +67,6 @@ public class Viva2q4 {
         else {
             lastdigit=checking-0;  //changes char checking into int lastdigit
         }
-            
             if(isValidISBN(hold,lastdigit)==1){
                 result[i]=true;
             }
@@ -87,11 +79,6 @@ public class Viva2q4 {
                for(int i=0;i<num.length;i++){
                    System.out.print(result[i]+" ");
                } 
-            
-            
-            
-         
-            
         }
         
     }
