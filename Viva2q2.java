@@ -19,7 +19,7 @@ public class Viva2q2 {
             case 1:{
                 System.out.print("Enter the radius of the circle: ");
                 double radius=kb.nextDouble();
-                calculateCircleArea(radius);
+                System.out.printf("The area of the cirlce is: "+"%.2f",calculateCircleArea(radius));
                 break;
             }
             case 2:{
@@ -27,7 +27,7 @@ public class Viva2q2 {
                 double length=kb.nextDouble();
                 System.out.print("Enter the width of the rectangle: ");
                 double width=kb.nextDouble();
-                calculateRectangleArea(length, width);
+                System.out.printf("The area of the rectangle is: "+"%.2f",calculateRectangleArea(length, width));
                 break;
             }
             case 3:{
@@ -35,7 +35,7 @@ public class Viva2q2 {
                 double base=kb.nextDouble();
                 System.out.print("Enter the height of the triangle: ");
                 double height=kb.nextDouble();
-                calculateTriangleArea(base, height);
+                System.out.printf("The area of the triangle is:"+"%.2f",calculateTriangleArea(base, height));
                 break;
             }
             default:{
@@ -44,21 +44,23 @@ public class Viva2q2 {
             }
         }
     }
-    public static void calculateCircleArea(double r){
+    public static double calculateCircleArea(double r){
         double area;
         area=Math.PI*(Math.pow(r,2));
-        System.out.printf("The area of the cirlce is: "+"%.2f",area);
+        
+        return area;
     }
     
-    public static void calculateRectangleArea(double l, double w){
+    public static double calculateRectangleArea(double l, double w){
         double area;
         area=l*w;
-        System.out.printf("The area of the rectangle is: "+"%.2f",area);
+        return area;
     }
     
-     public static void calculateTriangleArea(double b, double h){
+     public static double calculateTriangleArea(double b, double h){
         double area;
         area=(b*h)/2;
-        System.out.printf("The area of the triangle is: "+"%.2f",area);
+        return area;
+        
     }
 }
