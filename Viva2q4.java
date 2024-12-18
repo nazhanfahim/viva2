@@ -44,7 +44,7 @@ public class Viva2q4 {
     }
     
     public static void validateISBNList(String[] num){
-        boolean [] result=new boolean [num.length];
+        boolean [] result=new boolean [num.length]; 
         int hold;
         int lastdigit;
         char checking;
@@ -56,7 +56,7 @@ public class Viva2q4 {
             else{
                 hold=0;
             checking=num[i].charAt(9);
-            for(int j=0,count=8; j<=8;j++){
+            for(int j=0,count=8; j<=8;j++){ //changes String to Integer
                 int a=Character.getNumericValue(num[i].charAt(j));
                 hold+=a*Math.pow(10,count);
                 if(count>0)
