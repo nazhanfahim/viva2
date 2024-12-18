@@ -25,7 +25,7 @@ public class Viva2q4 {
         
     }
     
-    public static int isValidISBN(int num, int lastdigit){
+    public static int isValidISBN(int num, int lastdigit){ //made sure to take a number as input instead of String
         int check=0;
         int position = 9;
         while (num > 0) {
@@ -36,15 +36,15 @@ public class Viva2q4 {
         }
         check=check%11;
         if(check==lastdigit){
-            return 1;
+            return 1; //returns result like truth table
         }
         else{
             return 0;
         }   
     }
     
-    public static void validateISBNList(String[] num){
-        boolean [] result=new boolean [num.length]; 
+    public static void validateISBNList(String[] num){ //question requires for an array of Strings to be passed thru
+        boolean [] result=new boolean [num.length]; //question requires to store the result in a boolean array
         int hold;
         int lastdigit;
         char checking;
@@ -57,7 +57,7 @@ public class Viva2q4 {
                 hold=0;
             checking=num[i].charAt(9);
             for(int j=0,count=8; j<=8;j++){ //changes String to Integer
-                int a=Character.getNumericValue(num[i].charAt(j));
+                int a=Character.getNumericValue(num[i].charAt(j)); //cant use parseInt because a number ending with the digit X would be an invalid integer
                 hold+=a*Math.pow(10,count);
                 if(count>0)
                     count--;
@@ -71,14 +71,14 @@ public class Viva2q4 {
         }
             
             if(isValidISBN(hold,lastdigit)==1){
-                result[i]=true;
+                result[i]=true; //assign the results into a boolean array
             }
             else{
                 result[i]=false;
             }
             }
             }
-                System.out.print("Result: ");
+                System.out.print("Result: "); //prints out the boolean array
                for(int i=0;i<num.length;i++){
                    System.out.print(result[i]+" ");
                } 
