@@ -15,7 +15,7 @@ public class BankingSystem {
     private ArrayList<String> transactions; 
     
     //Represents the banking system with balance tracking and transaction history
-
+    // why private?  Only allow changes through controlled methods (like deposit() and withdraw()), making sure the program behaves in a predictable and safe way
     /**
      * @param args the command line arguments
      */
