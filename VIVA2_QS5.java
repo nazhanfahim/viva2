@@ -29,7 +29,7 @@ String[][] studentInfo = getStudentInfo(studentID, studentName, mark);
     }
    public static String [][] getStudentInfo(String [] studentID, String[] studentName,int[] mark){
        
-       String[][] studentInfo = new String[studentID.length][mark.length];
+       String[][] studentInfo = new String[studentID.length][3];
        for(int i=0;i<studentID.length;i++){
              studentInfo[i][0]= studentID[i];
              studentInfo[i][1]= studentName[i];
